@@ -75,34 +75,36 @@ Endpoints for:
 ---
 
 ## ⭐ Architecture Overview
+
+```text
 ┌──────────────────────────────┐
-│ Frontend (Next.js) │
+│       Frontend (Next.js)     │
 └───────────────▲──────────────┘
-│
+                │
 ┌───────────────┴──────────────┐
-│ FastAPI Backend │
-│ (Routing, auth, business API)│
+│        FastAPI Backend        │
+│  (Routing, auth, business API)│
 └───────────────▲──────────────┘
-│
+                │
 ┌───────────────┴──────────────┐
-│ AI Insight Engine (Agents) │
-│ - Scanner / Insight / RCA │
-│ - Planner / Recommender │
+│   AI Insight Engine (Agents)  │
+│  - Scanner / Insight / RCA    │
+│  - Planner / Recommender      │
 └───────────────▲──────────────┘
-│
+                │
 ┌───────────────┴──────────────┐
 │ Natural Language Query Engine │
-│ (Parser → SQL → Validator) │
+│   (Parser → SQL → Validator)  │
 └───────────────▲──────────────┘
-│
+                │
 ┌───────────────┴──────────────┐
 │ Data Warehouse + Metrics Layer│
 │ (Star Schema + Transformations)│
 └───────────────▲──────────────┘
-│
+                │
 ┌───────────────┴──────────────┐
-│ Ingestion Pipelines │
-│ (ETL + mock API loaders) │
+│      Ingestion Pipelines      │
+│   (ETL + mock API loaders)    │
 └───────────────────────────────┘
 
 ---
@@ -195,6 +197,7 @@ This project demonstrates:
 ```bash
 git clone https://github.com/yourusername/AutoPilot-Analytics.git
 cd AutoPilot-Analytics
+```bash
 
 2. Install backend dependencies
 pip install -r requirements.txt
