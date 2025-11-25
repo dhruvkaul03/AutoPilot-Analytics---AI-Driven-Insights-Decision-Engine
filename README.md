@@ -1,224 +1,216 @@
-🚀 AutoPilot Analytics
-AI-Driven Insights & Decision Engine for Small Businesses
+# 🚀 AutoPilot Analytics – AI-Driven Insights & Decision Engine for Small Businesses
 
-A hybrid Computer Science + AI systems project focused on algorithms, data engineering, and real-world business impact.
+A hybrid **Computer Science + AI systems** project focused on algorithms, data engineering, and real-world business impact.
 
-⭐ Overview
+---
+
+## ⭐ Overview
 
 Small and mid-sized businesses collect a tremendous amount of data—orders, customers, marketing performance, web traffic—but lack the engineering or data science infrastructure to turn that information into actionable decisions.
 
-AutoPilot Analytics solves this problem.
+**AutoPilot Analytics solves this problem.**
 
 This system is an end-to-end AI-powered analytics engine that:
 
-Ingests and normalizes raw business data
+- Ingests and normalizes raw business data  
+- Builds a metrics/semantic layer on top of a data warehouse  
+- Detects anomalies, trends, and performance changes using algorithms  
+- Uses multi-agent LLM reasoning to generate natural-language insights  
+- Enables natural language → SQL querying  
+- Provides a full dashboard for KPIs, insights, and explanations  
 
-Builds a metrics/semantic layer on top of a data warehouse
+This project blends **core CS concepts** (algorithms, databases, systems architecture, concurrency) with **AI/ML engineering** and practical business value.
 
-Detects anomalies, trends, and performance changes using algorithms
+---
 
-Uses multi-agent LLM reasoning to generate natural-language insights
+## ⭐ Key Features
 
-Enables natural language → SQL querying
+### 🔹 1. Data Ingestion Layer
 
-Provides a full dashboard for KPIs, insights, and explanations
+- Modular adapters for mock Shopify/Stripe/Analytics data  
+- ETL pipeline (extract → transform → load)  
+- Async ingestion + scheduling  
+- Input validation + logging  
 
-This project blends core CS concepts (algorithms, databases, systems architecture, concurrency) with AI/ML engineering and practical business value.
+### 🔹 2. Data Warehouse + Semantic Metrics Layer
 
-⭐ Key Features
-🔹 1. Data Ingestion Layer
+- Star schema (fact tables + dimension tables)  
+- Clean definitions of key KPIs (Revenue, AOV, ROAS, CAC, LTV, retention, churn)  
+- Automatic metric computation + caching  
 
-Modular adapters for mock Shopify/Stripe/Analytics data
-
-ETL pipeline (extract → transform → load)
-
-Async ingestion + scheduling
-
-Input validation + logging
-
-🔹 2. Data Warehouse + Semantic Metrics Layer
-
-Star schema (fact tables + dimension tables)
-
-Clean definitions of key KPIs:
-
-Revenue, AOV, ROAS, CAC, LTV, retention, churn
-
-Automatic metric computation + caching
-
-🔹 3. AI Insight Engine (Multi-Agent Reasoning)
+### 🔹 3. AI Insight Engine (Multi-Agent Reasoning)
 
 Four cooperating agents:
 
-Metric Scanner Agent — detects trends, anomalies, breakpoints
+- **Metric Scanner Agent** — detects trends, anomalies, breakpoints  
+- **Insight Agent** — converts math into natural-language explanations  
+- **Root Cause Agent** — identifies drivers behind metric changes  
+- **Action Agent** — recommends tactical decisions  
 
-Insight Agent — converts math into natural-language explanations
+### 🔹 4. Natural Language → SQL Query Engine
 
-Root Cause Agent — identifies drivers behind metric changes
+- Schema-aware question parsing  
+- SQL generation  
+- Query validation & safety checks  
+- Returns chart-ready data + natural-language explanation  
 
-Action Agent — suggests budget shifts and tactical recommendations
+### 🔹 5. REST API (FastAPI Backend)
 
-🔹 4. Natural Language → SQL Query Engine
+Endpoints for:
 
-Schema-aware question parsing
+- Ingestion  
+- Metrics  
+- Insights  
+- Analysis  
+- NL-to-SQL querying  
 
-SQL generation with constraints
+### 🔹 6. Frontend Dashboard (React / Next.js)
 
-Query plan validation
+- KPI metric cards  
+- Trend charts  
+- Insight feed  
+- NL-to-SQL “Chat with Your Data” interface  
+- Customer/product/channel segmentation views  
 
-Returns both chart-ready data & an explanation
+---
 
-🔹 5. REST API (FastAPI)
-
-Endpoints for ingestion, metrics, insights, analysis, and querying.
-
-🔹 6. Frontend Dashboard (React / Next.js)
-
-KPI cards
-
-Trend charts
-
-Insight feed
-
-NL-to-SQL chat interface
-
-Segment analysis visualizations
-
-⭐ Architecture Overview
-
-AutoPilot Analytics is divided into 6 main layers:
-
+## ⭐ Architecture Overview
 ┌──────────────────────────────┐
-│       Frontend (Next.js)     │
+│ Frontend (Next.js) │
 └───────────────▲──────────────┘
-                │
+│
 ┌───────────────┴──────────────┐
-│        FastAPI Backend        │
-│  (Routing, auth, business API)│
+│ FastAPI Backend │
+│ (Routing, auth, business API)│
 └───────────────▲──────────────┘
-                │
+│
 ┌───────────────┴──────────────┐
-│   AI Insight Engine (Agents)  │
-│  - Scanner / Insight / RCA    │
-│  - Planner / Recommender      │
+│ AI Insight Engine (Agents) │
+│ - Scanner / Insight / RCA │
+│ - Planner / Recommender │
 └───────────────▲──────────────┘
-                │
+│
 ┌───────────────┴──────────────┐
-│  Natural Language Query Engine│
-│   (Parser → SQL → Validator)  │
+│ Natural Language Query Engine │
+│ (Parser → SQL → Validator) │
 └───────────────▲──────────────┘
-                │
+│
 ┌───────────────┴──────────────┐
 │ Data Warehouse + Metrics Layer│
-│  (Star Schema + Transformations)
+│ (Star Schema + Transformations)│
 └───────────────▲──────────────┘
-                │
+│
 ┌───────────────┴──────────────┐
-│      Ingestion Pipelines      │
-│   (ETL + mock API loaders)    │
+│ Ingestion Pipelines │
+│ (ETL + mock API loaders) │
 └───────────────────────────────┘
 
+---
 
-This architecture demonstrates systems design, algorithms, data modeling, NLP, AI reasoning, and software engineering.
-
-⭐ Why This Project Is Important (Business Perspective)
+## ⭐ Why This Project Matters (Business Perspective)
 
 Businesses often have:
 
-scattered data
-
-disconnected dashboards
-
-no systematic way to detect issues
-
-no clear understanding of what’s driving performance
-
-no data team to interpret trends
+- scattered data  
+- disconnected dashboards  
+- no systematic insight detection  
+- no root-cause analysis  
+- no data team  
 
 AutoPilot Analytics:
 
-centralizes all data into one model
+- centralizes all data  
+- automatically analyzes metrics  
+- flags anomalies  
+- explains what changed & why  
+- recommends actionable steps  
 
-automatically analyzes metrics
+---
 
-flags anomalies instantly
+## ⭐ Why This Project Matters for Computer Science
 
-explains what caused changes
+This project demonstrates:
 
-recommends actions
+### ✔ Algorithms
+- Time-series anomaly detection  
+- Clustering & segmentation  
+- Ranking functions  
+- Rolling window analytics  
 
-This meaningfully reduces time spent manually investigating data issues and helps small teams make faster, better decisions.
+### ✔ Data Structures
+- Star schema design  
+- Indexing  
+- Query planning  
 
-⭐ Technologies Used
-Backend
+### ✔ Systems Engineering
+- Modular ingestion architecture  
+- Async scheduling  
+- REST API design  
+- Multi-agent LLM orchestration  
 
-Python
+### ✔ Databases / Query Engines
+- SQL generation  
+- Query validation  
+- Fact vs dimension modeling  
 
-FastAPI
+### ✔ AI / NLP Engineering
+- Text-to-SQL  
+- Insight generation  
+- Multi-step reasoning  
 
-PostgreSQL / DuckDB
+### ✔ Full-Stack Development
+- React/Next.js frontend  
+- Visualization pipelines  
 
-Asyncio / Celery
+---
 
-Pandas / Polars
+## ⭐ Tech Stack
 
-AI
+### Backend  
+- Python  
+- FastAPI  
+- PostgreSQL / DuckDB  
+- Asyncio  
+- Pandas / Polars  
 
-OpenAI / Llama / Mistral APIs
+### AI  
+- OpenAI / Mistral / Llama  
+- Multi-agent architecture  
+- Prompt engineering  
 
-Custom prompting
+### Frontend  
+- React / Next.js  
+- TailwindCSS  
+- Recharts / Chart.js  
 
-Multi-agent patterns
+### DevOps  
+- Docker (optional)  
+- GitHub Actions (optional)  
 
-Frontend
+---
 
-React / Next.js
+## ⭐ Getting Started
 
-TailwindCSS
-
-Chart.js or Recharts
-
-Infrastructure
-
-Docker (optional)
-
-GitHub Actions CI (optional)
-
-⭐ Getting Started
-1. Clone the repo
+### 1. Clone the repo
+```bash
 git clone https://github.com/yourusername/AutoPilot-Analytics.git
 cd AutoPilot-Analytics
 
-2. Install dependencies
+2. Install backend dependencies
 pip install -r requirements.txt
 
 3. Initialize the database
 python scripts/setup_db.py
 
-4. Start the backend
+4. Run the backend
 uvicorn backend.api.main:app --reload
 
-5. Start the frontend
+5. Run the frontend
 npm install
 npm run dev
-
-⭐ Future Enhancements
-
-Budget optimization using bandits (UCB / Thompson Sampling)
-
-Customer lifetime value forecasting
-
-Multi-tenant architecture
-
-Live Shopify/Stripe integration
-
-Agent memory for long-term tracking
-
-⭐ Demo
-
-(Coming soon — after you build the dashboard and API.)
 
 ⭐ Author
 
 Dhruv Kaul
 UIUC Statistics + Data Science
+
